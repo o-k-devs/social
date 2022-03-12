@@ -7,7 +7,7 @@ module.exports = {
     es6: true,
     node: true,
   },
-  parser: '@babel/eslint-parser',
+  // parser: '@babel/eslint-parser',
   extends: [
     'next/core-web-vitals',
     'eslint:recommended',
