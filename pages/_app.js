@@ -1,23 +1,17 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-`;
+/* eslint-disable react/prop-types */
+import { ThemeProvider } from 'styled-components';
+import GlobalStyles from 'styles/globalStyles';
+import colors from 'styles/colors';
+import 'styles/fonts.css';
 
 const theme = {
-  colors: {
-    primary: '#0070f3',
-  },
+  colors,
 };
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <GlobalStyle />
+      <GlobalStyles />
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
       </ThemeProvider>

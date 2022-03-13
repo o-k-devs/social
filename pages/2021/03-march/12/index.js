@@ -2,16 +2,6 @@ import React, { useEffect, useState, useRef, useCallback } from 'react';
 import styled from 'styled-components';
 import gsap, { Power3 } from 'gsap';
 
-const Wrapper = styled.div`
-  height: calc(100vh - 300px);
-  background-color: #292829;
-  display: flex;
-  justify-content: center;
-  padding: 150px;
-  overflow: hidden;
-  position: relative;
-`;
-
 const Button = styled.button`
   position: relative;
   height: 200px;
@@ -132,10 +122,7 @@ const playInOut = (progress, playRef, pauseRef, toValue) => {
 
 const SPACE_BAR = 32;
 
-/**
- * Play/pause interaction
- */
-function MarchTwelve() {
+function PlayPause() {
   const [playing, setPlaying] = useState(false);
   const progress = useRef({ value: 0 });
 
@@ -170,32 +157,26 @@ function MarchTwelve() {
   }, [playing]);
 
   return (
-    <Wrapper>
-      <Button
-        type="button"
-        ref={buttonRef}
-        onClick={() => setPlaying(!playing)}
-      >
-        <IconWrapper>
-          <svg
-            width="100"
-            height="100"
-            viewBox="0 0 40 40"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path ref={playRef} fill="#E757FF" />
-          </svg>
-        </IconWrapper>
-        <IconWrapper>
-          <Pause ref={pauseRef}>
-            <Left />
-            <Right />
-          </Pause>
-        </IconWrapper>
-      </Button>
-    </Wrapper>
+    <Button type="button" ref={buttonRef} onClick={() => setPlaying(!playing)}>
+      <IconWrapper>
+        <svg
+          width="100"
+          height="100"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path ref={playRef} fill="#E757FF" />
+        </svg>
+      </IconWrapper>
+      <IconWrapper>
+        <Pause ref={pauseRef}>
+          <Left />
+          <Right />
+        </Pause>
+      </IconWrapper>
+    </Button>
   );
 }
 
-export default MarchTwelve;
+export default PlayPause;

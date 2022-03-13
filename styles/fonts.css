@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'MADETOMMY-Light';
+  src: url('/fonts/made_tommy_light-webfont.woff2') format('woff2'),
+    url('/fonts/made_tommy_light-webfont.woff') format('woff');
+  font-style: light;
+}
+
+@font-face {
+  font-family: 'MADETOMMY-Medium';
+  src: url('/fonts/made_tommy_medium-webfont.woff2') format('woff2'),
+    url('/fonts/made_tommy_medium-webfont.woff') format('woff');
+  font-style: medium;
+}
+
+@font-face {
+  font-family: 'MADETOMMY-Black';
+  src: url('/fonts/made_tommy_black-webfont.woff2') format('woff2'),
+    url('/fonts/made_tommy_black-webfont.woff') format('woff');
+  font-style: black;
+}
